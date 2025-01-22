@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/photoapp/static/css/main.f855e6bc.css",
+    "main.js": "/photoapp/static/js/main.7c691322.js",
+    "static/js/488.3be74c7f.chunk.js": "/photoapp/static/js/488.3be74c7f.chunk.js",
+    "static/media/sheep.jpeg": "/photoapp/static/media/sheep.9526d2abbeb4abb59be6.jpeg",
+    "static/media/cattle.jpeg": "/photoapp/static/media/cattle.85946d09b70719344bb6.jpeg",
+    "static/media/duck.jpeg": "/photoapp/static/media/duck.31b0fdec199789ac5adc.jpeg",
+    "index.html": "/photoapp/index.html",
+    "main.f855e6bc.css.map": "/photoapp/static/css/main.f855e6bc.css.map",
+    "main.7c691322.js.map": "/photoapp/static/js/main.7c691322.js.map",
+    "488.3be74c7f.chunk.js.map": "/photoapp/static/js/488.3be74c7f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.7c691322.js"
+  ]
+}
