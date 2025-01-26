@@ -2,8 +2,6 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { createTheme } from "@mui/material/styles";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import DescriptionIcon from "@mui/icons-material/Description";
 import LayersIcon from "@mui/icons-material/Layers";
@@ -21,11 +19,13 @@ import {
   type SidebarFooterProps,
 } from "@toolpad/core/DashboardLayout";
 import Dialog from "@mui/material/Dialog";
+import PhotoIcon from "@mui/icons-material/Photo";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
-import image1 from "../images/cattle.jpeg"; // Import the image
-import image2 from "../images/sheep.jpeg"; // Import the image
-import image3 from "../images/duck.jpeg"; // Import the image
-import image4 from "../images/duck02.jpeg"; // Import the image
+import image1 from "../files/cattle.jpeg"; // Import the image
+import image2 from "../files/sheep.jpeg"; // Import the image
+import image3 from "../files/duck.jpeg"; // Import the image
+import image4 from "../files/duck02.jpeg"; // Import the image
 
 const NAVIGATION: Navigation = [
   {
@@ -35,12 +35,12 @@ const NAVIGATION: Navigation = [
   {
     segment: "photos",
     title: "Photos",
-    icon: <DashboardIcon />,
+    icon: <PhotoIcon />,
   },
   {
-    segment: "orders",
-    title: "Orders",
-    icon: <ShoppingCartIcon />,
+    segment: "videos",
+    title: "Videos",
+    icon: <PlayCircleOutlineIcon />,
   },
   {
     kind: "divider",
@@ -91,14 +91,22 @@ const demoTheme = createTheme({
 
 function DemoPageContent({ pathname }: { pathname: string }) {
   const [open, setOpen] = React.useState(false);
-  const [selectedImage, setSelectedImage] = React.useState({
-    src: "",
-    alt: "",
-  });
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const images = [image1, image2, image3, image4]; // Array of images
 
-  const handleOpen = (src: string, alt: string) => {
-    setSelectedImage({ src, alt });
+  const handleOpen = (index: number) => {
+    setCurrentIndex(index);
     setOpen(true);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Loop to the first image after the last one
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    ); // Loop to the last image if at the first one
   };
 
   const handleClose = () => {
@@ -116,7 +124,7 @@ function DemoPageContent({ pathname }: { pathname: string }) {
         }}
       >
         {/* Render all images */}
-        {[image1, image2, image3, image4].map((img, index) => (
+        {images.map((img, index) => (
           <img
             key={index}
             src={img}
@@ -127,21 +135,67 @@ function DemoPageContent({ pathname }: { pathname: string }) {
               borderRadius: "10px",
               cursor: "pointer",
             }}
-            onClick={() => handleOpen(img, `Image ${index + 1}`)} // Open modal on click
+            onClick={() => handleOpen(index)} // Open modal on click
           />
         ))}
 
         {/* Dialog for enlarged image */}
         <Dialog open={open} onClose={handleClose} maxWidth="lg">
-          <img
-            src={selectedImage.src}
-            alt={selectedImage.alt}
-            style={{
-              maxWidth: "90vw",
-              maxHeight: "90vh",
-              objectFit: "contain",
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              p: 2,
             }}
-          />
+          >
+            {/* Enlarged image */}
+            <img
+              src={images[currentIndex]}
+              alt={`Image ${currentIndex + 1}`}
+              style={{
+                maxWidth: "90vw",
+                maxHeight: "90vh",
+                objectFit: "contain",
+              }}
+            />
+
+            {/* Navigation buttons */}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+                mt: 2,
+              }}
+            >
+              <button
+                onClick={handlePrev}
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  padding: "8px 16px",
+                  fontSize: "16px",
+                }}
+              >
+                Previous
+              </button>
+              <button
+                onClick={handleNext}
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  padding: "8px 16px",
+                  fontSize: "16px",
+                }}
+              >
+                Next
+              </button>
+            </Box>
+          </Box>
         </Dialog>
       </div>
     );
