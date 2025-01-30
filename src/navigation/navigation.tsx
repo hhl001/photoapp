@@ -413,7 +413,7 @@ function CustomAppTitle() {
   return (
     <Stack direction="row" alignItems="center" spacing={2}>
       <CloudCircleIcon fontSize="large" color="primary" />
-      <Typography variant="h6">Photo Gallery</Typography>
+      <Typography variant="h6">My photos and videos</Typography>
     </Stack>
   );
 }
