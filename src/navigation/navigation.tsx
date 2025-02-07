@@ -23,9 +23,16 @@ import PhotoIcon from "@mui/icons-material/Photo";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 import image1 from "../files/cattle.jpeg"; // Import the image
-import image2 from "../files/sheep.jpeg"; // Import the image
-import image3 from "../files/duck.jpeg"; // Import the image
-import image4 from "../files/duck02.jpeg"; // Import the image
+import image2 from "../files/sheep.jpeg";
+import image3 from "../files/duck.jpeg";
+import image4 from "../files/duck02.jpeg";
+import image5 from "../files/cattle2.jpeg";
+import image6 from "../files/cattle3.jpeg";
+import image7 from "../files/peacock.jpeg";
+import image8 from "../files/elephant.jpeg";
+import image9 from "../files/whale.jpeg";
+import image10 from "../files/goose.jpeg";
+import image11 from "../files/bird.jpeg";
 
 const NAVIGATION: Navigation = [
   {
@@ -92,7 +99,19 @@ const demoTheme = createTheme({
 function DemoPageContent({ pathname }: { pathname: string }) {
   const [open, setOpen] = React.useState(false);
   const [currentIndex, setCurrentIndex] = React.useState(0);
-  const images = [image1, image2, image3, image4]; // Array of images
+  const images = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+    image11,
+  ]; // Array of images
   const videos = [
     {
       type: "video",
@@ -141,8 +160,10 @@ function DemoPageContent({ pathname }: { pathname: string }) {
         style={{
           display: "flex",
           gap: "20px",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           marginTop: "20px",
+          flexWrap: "wrap",
+          maxWidth: "100vw",
         }}
       >
         {/* Render all images */}
