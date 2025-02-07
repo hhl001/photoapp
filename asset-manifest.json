@@ -1,19 +1,28 @@
 {
   "files": {
     "main.css": "/photoapp/static/css/main.f855e6bc.css",
-    "main.js": "/photoapp/static/js/main.6ed52042.js",
+    "main.js": "/photoapp/static/js/main.704bdc00.js",
     "static/js/488.3be74c7f.chunk.js": "/photoapp/static/js/488.3be74c7f.chunk.js",
+    "static/media/elephant.jpeg": "/photoapp/static/media/elephant.69c4fb6964a4a4d057e8.jpeg",
     "static/media/sheep.jpeg": "/photoapp/static/media/sheep.9526d2abbeb4abb59be6.jpeg",
+    "static/media/cattle2.jpeg": "/photoapp/static/media/cattle2.df5c97a36247964acd4c.jpeg",
     "static/media/cattle.jpeg": "/photoapp/static/media/cattle.85946d09b70719344bb6.jpeg",
+    "static/media/peacock.jpeg": "/photoapp/static/media/peacock.5aba4181806b56eb9151.jpeg",
     "static/media/duck.jpeg": "/photoapp/static/media/duck.31b0fdec199789ac5adc.jpeg",
     "static/media/duck02.jpeg": "/photoapp/static/media/duck02.9b96b114df2ffb870cda.jpeg",
+    "static/media/fox.jpeg": "/photoapp/static/media/fox.18014566388e5351742c.jpeg",
+    "static/media/whale.jpeg": "/photoapp/static/media/whale.5fefdd422a5d40189083.jpeg",
+    "static/media/polarBear.jpeg": "/photoapp/static/media/polarBear.f560eaed5e1e4076b50d.jpeg",
+    "static/media/cattle3.jpeg": "/photoapp/static/media/cattle3.699af308e3658327d71d.jpeg",
+    "static/media/bird.jpeg": "/photoapp/static/media/bird.8136821bed6f53e01b77.jpeg",
+    "static/media/goose.jpeg": "/photoapp/static/media/goose.4ba9ef63843a35cd98f8.jpeg",
     "index.html": "/photoapp/index.html",
     "main.f855e6bc.css.map": "/photoapp/static/css/main.f855e6bc.css.map",
-    "main.6ed52042.js.map": "/photoapp/static/js/main.6ed52042.js.map",
+    "main.704bdc00.js.map": "/photoapp/static/js/main.704bdc00.js.map",
     "488.3be74c7f.chunk.js.map": "/photoapp/static/js/488.3be74c7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.6ed52042.js"
+    "static/js/main.704bdc00.js"
   ]
 }
