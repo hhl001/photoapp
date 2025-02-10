@@ -33,6 +33,8 @@ import image8 from "../files/elephant.jpeg";
 import image9 from "../files/whale.jpeg";
 import image10 from "../files/goose.jpeg";
 import image11 from "../files/bird.jpeg";
+import image12 from "../files/polarBear.jpeg";
+import image13 from "../files/fox.jpeg";
 
 const NAVIGATION: Navigation = [
   {
@@ -111,6 +113,8 @@ function DemoPageContent({ pathname }: { pathname: string }) {
     image9,
     image10,
     image11,
+    image12,
+    image13,
   ]; // Array of images
   const videos = [
     {
