@@ -8,7 +8,7 @@ import LayersIcon from "@mui/icons-material/Layers";
 import { AppProvider, type Navigation } from "@toolpad/core/AppProvider";
 import { useDemoRouter } from "@toolpad/core/internal";
 import Stack from "@mui/material/Stack";
-import CloudCircleIcon from "@mui/icons-material/CloudCircle";
+import PhotoLibraryOutlinedIcon from "@mui/icons-material/PhotoLibraryOutlined";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
@@ -437,7 +437,7 @@ function SidebarFooter({ mini }: SidebarFooterProps) {
 function CustomAppTitle() {
   return (
     <Stack direction="row" alignItems="center" spacing={2}>
-      <CloudCircleIcon fontSize="large" color="primary" />
+      <PhotoLibraryOutlinedIcon fontSize="large" color="primary" />
       <Typography variant="h6">My photos and videos</Typography>
     </Stack>
   );
